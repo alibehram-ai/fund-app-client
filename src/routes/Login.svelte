@@ -1,15 +1,3 @@
-<script>
-  import { Router, Link, Route } from "svelte-routing";
-  import Home from "./routes/Home.svelte";
-  import About from "./routes/About.svelte";
-  import Restaurants from "./routes/Restaurants.svelte";
-  import Order from "./routes/Order.svelte";
-
-
-
-</script>
-
-
 <body>
     <div class="background">
         <div class="shape"></div>
@@ -156,4 +144,3 @@ margin-right: 4px;
 }
 
 </style>
-

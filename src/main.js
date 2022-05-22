@@ -1,5 +1,7 @@
+import singleSpaSvelte from 'single-spa-svelte';
 import App from './App.svelte';
 
+/*
 const app = new App({
 	target: document.body,
 	props: {
@@ -8,3 +10,13 @@ const app = new App({
 });
 
 export default app;
+*/
+
+const svelteLifecycles = singleSpaSvelte({
+  component: App,
+  domElementGetter: () => document.getElementById('single-spa-application:@feedme/container'),
+  props: { someData: 'data' }
+});
+export const bootstrap = svelteLifecycles.bootstrap;
+export const mount = svelteLifecycles.mount;
+export const unmount = svelteLifecycles.unmount;
